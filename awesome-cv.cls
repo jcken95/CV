@@ -81,13 +81,12 @@
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
 % Needed to deal hyperlink
-\RequirePackage[hidelinks,unicode]{hyperref}
-\hypersetup{%
-  pdftitle={},
-  pdfauthor={},
-  pdfsubject={},
-  pdfkeywords={}
-}
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue
+    }
+
 
 
 %-------------------------------------------------------------------------------
@@ -608,4 +607,3 @@
   \end{justify}
   \vspace{-4.0mm}
 }
-
