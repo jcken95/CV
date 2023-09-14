@@ -1,0 +1,180 @@
+---
+name: Dr. Jack
+surname: Kennedy
+date: "`r format(Sys.time(), '%B, %Y')`"
+www: jcken95.github.io
+github: jcken95
+linkedin: jcken95
+email: jckennedy18@gmail.com
+position: statistician | data scientist | educator | all-round-nerd
+headcolor: 0086b3 #414141
+docname: curriculum vitae
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+source("R/helpers.R")
+```
+
+# Professional Summary
+
+I am a PhD educated statistician and data scientist with experience in data science consultancy and training.
+
+I enjoy telling stories with data, working with technology, and finding data-driven solutions to challenging problems.
+
+# Experience
+
+```{r experience}
+
+jr_experience <- c(
+  "Provide statistical consulting services to a broad range of clients",
+  "Software development: contribute to production-ready R packages; unit testing; CI/CD",
+  "Teach statistical and programming concepts in R with best practices front and centre to academia, industry and government",
+  "Organise the 'North East Data Scientists' meetup"
+)
+
+intern_experience <- c(
+  "Collaborated with NU Solve, Jumping Rivers and the Food and Agricultural Organisation (UN)",
+  "Developed a model-based clustering approach to diagnose the sustainability of fish populations across the world",
+  "Developed a bespoke R package to provide FAO with the tools to take the developed methods forward",
+  "Provided a rapid scoping project for a large automotive manufacturer"
+)
+
+gta_experience <- c(
+  "Providing one-to-one support via the university Maths-Aid service to students; queries ranging from 'How to calculate a percentage?' to 'Which test is most appropriate for my data?' and 'How to solve this differential equation?'",
+  "Provided maternity cover for senior tutor: triaging and delegating Maths-Aid appointments",
+  "Delivered lectures to undergraduate students on statistical topics",
+  "Marked coursework in a timely manner"
+)
+
+work_experience <- tibble::tribble(
+  ~ job, ~ start, ~ end, ~ employer, ~details,
+  "Data Scientist", "Jan 2023", "Today", "Jumping Rivers", jr_experience,
+  "Data Scientist (intern)", "Jan 2022", " Apr 2022", "NU Solve", intern_experience,
+  "Graduate Teaching Assistant", "Oct 2018", " Dec 2022", "Newcastle University", gta_experience
+)
+work_experience %>%
+  detailed_entries(
+    what = job,
+    when = glue::glue("{start} - {end}"),
+    with = employer,
+    why = details
+  )
+```
+
+# Education
+
+```{r education}
+
+phd_notes <- c(
+  "Thesis: Uncertainty Quantification for Stochastic Simulators with Application to Offshore Wind Farms",
+  "Applied and developed Gaussian process based techniques to improve the efficiency of stochastic simulation experiments",
+  "Research themes: Bayesian methods; Decision Analysis; Bayesian Optimisation; Emulation; Gaussian Processes",
+  "Published in a leading Statistics journal"
+)
+
+undergrad_notes <- c(
+  "Thesis: Multivariate Statistics & Machine Learning: An Application to Product Costing in Nissan",
+  "Studied a range of mathematical and statistical topics: regression & statistical modelling; Markov models; time series; queuing theory; extreme value theory; flexible regression"
+)
+
+edu <- tibble::tribble(
+  ~ degree, ~ start, ~ end, ~ institution, ~details,
+  "PhD Statistics", 2018, 2023, "Newcastle University", phd_notes,
+  "MMathStat (First class)", 2012, 2018, "Newcastle University", undergrad_notes,
+)
+edu %>%
+  detailed_entries(
+    what = degree,
+    when = glue::glue("{start} - {end}"),
+    with = institution,
+    why = details
+  )
+```
+
+# Technical & Professional Skills
+
+```{r skills}
+
+communicating_notes <- c(
+  "Award-winning speaker with over 5 years teaching experience",
+  "Produces professional, reproducible documents with R Markdown and Quarto",
+  "Writes technical yet accessible content and documents"
+)
+
+skills <- tibble::tribble(
+  ~ skill, ~ statement,
+  "R Programming",  "Developed production-ready R software and packages as part of a team. Confident with base R and the {tidyverse}",
+  "Statistics & Machine Learning", "Bayesian methods, linear and non-linear regression, Bayesian optimisation, clustering, classification, inference, prediction",
+  "Communicating", communicating_notes,
+  "Software Development", "Linux, Git, CI/CD, Command line",
+  "Other languages & Software", "LaTeX, Stan, MATLAB, SLURM"
+)
+skills %>%
+  detailed_entries(
+    what = skill,
+    why = statement
+  )
+```
+## 
+
+# Extra Curricular & Service
+
+```{r service}
+
+rss_notes <- c(
+  "Active member of the Royal statistical society; organised a variety of in-person and online events ",
+  "Member & Chair of the Young Statisticians Section; promoting statistical careers early-career statisticians and data scientists",
+  "Treasurer for North Eastern Local Group"
+)
+
+cv_stats <- get_stack_user("283201")
+cv_rep <- cv_stats$reputation
+cv_badges <- cv_stats %>%
+  dplyr::mutate(
+    badge_sum = rowSums(dplyr::pick(dplyr::starts_with("badge")))
+  ) %>%
+  dplyr::pull("badge_sum")
+todays_date = lubridate::today()
+todays_date_friendly = glue::glue(
+  "{lubridate::month(todays_date, label = TRUE, abbr = FALSE)} {lubridate::year(todays_date)}"
+)
+
+
+misc_notes <- c(
+  "Participate in #TidyTuesday data visualisation challenge; see github profile for portfolio.",
+  glue::glue("Top 5% overall contributor on Crossvalidated. As of {todays_date_friendly} I have {cv_stats$reputation} reputation and {cv_badges} badges.")
+)
+
+service <- tibble::tribble(
+  ~ job, ~ start, ~ end, ~ institution, ~details,
+  "Fellow & Volunteer", "2019", "Today", "Royal Statistical Society", rss_notes,
+  "", "", "", "Projects & Online Activity", misc_notes,
+)
+service %>%
+  detailed_entries(
+    what = job,
+    when = glue::glue("{start} - {end}"),
+    with = institution,
+    why = details
+  )
+
+```
+
+# Interests
+
+```{r interests}
+
+interests <- tibble::tribble(
+  ~ area, ~ interests,
+  "Professional", "Supporting early-career statisticians and data scientists, Bayesian methods, visualisation & communicating statistics, modelling, reproducibility",
+  "Personal", "Cycling, hiking, running, being outside"
+)
+interests %>%
+  detailed_entries(
+    what = area,
+    why = interests
+  )
+```
