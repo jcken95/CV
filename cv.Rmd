@@ -22,7 +22,7 @@ source("R/helpers.R")
 
 I am a PhD educated statistician and data scientist with experience in data science consultancy and training.
 
-I enjoy telling stories with data, working with technology, and finding data-driven solutions to challenging problems.
+I love telling stories with data, working with technology, and finding data-driven solutions to challenging problems.
 
 # Experience
 
@@ -151,7 +151,7 @@ misc_notes <- c(
 service <- tibble::tribble(
   ~ job, ~ start, ~ end, ~ institution, ~details,
   "Fellow & Volunteer", "2019", "Today", "Royal Statistical Society", rss_notes,
-  "", "", "", "Projects & Online Activity", misc_notes,
+  "Things I do because I love stats, data and computers", "", "", "Projects & Online Activity", misc_notes,
 )
 service %>%
   detailed_entries(
