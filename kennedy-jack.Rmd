@@ -30,9 +30,9 @@ I love telling stories with data, working with technology, and finding data-driv
 
 jr_experience <- c(
   "Provide statistical consulting services to a broad range of clients",
-  "Software development: contribute to production-ready R packages; unit testing; CI/CD",
+  "Software development: contribute to production-ready R packages",
   "Teach statistical and programming concepts in R with best practices front and centre to academia, industry and government",
-  "Organise the 'North East Data Scientists' meetup"
+  "Organise the `North East Data Scientists' meetup"
 )
 
 intern_experience <- c(
@@ -43,7 +43,7 @@ intern_experience <- c(
 )
 
 gta_experience <- c(
-  "Providing one-to-one support via the university Maths-Aid service to students; queries ranging from 'How to calculate a percentage?' to 'Which test is most appropriate for my data?' and 'How to solve this differential equation?'",
+  "Providing one-to-one support via the university Maths-Aid service to students; queries ranging from `How to calculate a percentage?' to `Which test is most appropriate for my data?' and `How to solve this differential equation?'",
   "Provided maternity cover for senior tutor: triaging and delegating Maths-Aid appointments",
   "Delivered lectures to undergraduate students on statistical topics",
   "Marked coursework in a timely manner"
@@ -52,7 +52,7 @@ gta_experience <- c(
 work_experience <- tibble::tribble(
   ~ job, ~ start, ~ end, ~ employer, ~details,
   "Data Scientist", "Jan 2023", "Today", "Jumping Rivers", jr_experience,
-  "Data Scientist (intern)", "Jan 2022", " Apr 2022", "NU Solve", intern_experience,
+  "Data Scientist (intern)", "Jan 2022", "May 2022", "NU Solve", intern_experience,
   "Graduate Teaching Assistant", "Oct 2018", " Dec 2022", "Newcastle University", gta_experience
 )
 work_experience %>%
@@ -77,7 +77,8 @@ phd_notes <- c(
 
 undergrad_notes <- c(
   "Thesis: Multivariate Statistics & Machine Learning: An Application to Product Costing in Nissan",
-  "Studied a range of mathematical and statistical topics: regression & statistical modelling; Markov models; time series; queuing theory; extreme value theory; flexible regression"
+  "Provided Nissan's finance team with a statistical and ML toolbox to help them understand their data; regression for fast product costing; dimension reduction and clustering for outlier detection",
+  "Studied a range of mathematical and statistical topics: regression & statistical modelling; Markov models; time series; queuing theory; extreme value theory; flexible regression; multivariate methods"
 )
 
 edu <- tibble::tribble(
@@ -101,15 +102,15 @@ edu %>%
 communicating_notes <- c(
   "Award-winning speaker with over 5 years teaching experience",
   "Produces professional, reproducible documents with R Markdown and Quarto",
-  "Writes technical yet accessible content and documents"
+  "Writes technical yet accessible content and documents; PhD thesis and blog posts described as accessible"
 )
 
 skills <- tibble::tribble(
   ~ skill, ~ statement,
-  "R Programming",  "Developed production-ready R software and packages as part of a team. Confident with base R and the {tidyverse}",
+  "R Programming", "Developed production-ready R software and packages as part of a team. Confident with base R and the {tidyverse}",
   "Statistics & Machine Learning", "Bayesian methods, linear and non-linear regression, Bayesian optimisation, clustering, classification, inference, prediction",
   "Communicating", communicating_notes,
-  "Software Development", "Linux, Git, CI/CD, Command line",
+  "Software Development Toolkit", "Linux, Git, CI/CD, Command line",
   "Other languages & Software", "LaTeX, Stan, MATLAB, SLURM"
 )
 skills %>%
@@ -125,8 +126,9 @@ skills %>%
 ```{r service}
 
 rss_notes <- c(
-  "Active member of the Royal statistical society; organised a variety of in-person and online events ",
-  "Member & Chair of the Young Statisticians Section; promoting statistical careers early-career statisticians and data scientists",
+  "Active member of the Royal statistical society; organised a variety of in-person and online events; collaborating with Head of Conferences and Events to organise conference sessions",
+  "Member & Chair of the Young Statisticians Section; supporting early-career statisticians and data scientists",
+  "Overseeing a team of 12 volunteers as chair of the YSS",
   "Treasurer for North Eastern Local Group"
 )
 
@@ -144,8 +146,8 @@ todays_date_friendly = glue::glue(
 
 
 misc_notes <- c(
-  "Participate in #TidyTuesday data visualisation challenge; see github profile for portfolio.",
-  glue::glue("Top 5% overall contributor on Crossvalidated. As of {todays_date_friendly} I have {cv_stats$reputation} reputation and {cv_badges} badges.")
+  "Participate in #TidyTuesday data visualisation challenge to practise visualisation and learn new-to-me R packages; see github profile for portfolio",
+  glue::glue("Top 5% overall contributor on Crossvalidated. As of {todays_date_friendly} gained {cv_stats$reputation} reputation and {cv_badges} badges")
 )
 
 service <- tibble::tribble(
@@ -166,11 +168,15 @@ service %>%
 # Interests
 
 ```{r interests}
+professional_interests = c(
+  "Technical: Bayesian methods; data visualisation; modelling; reproducibility",
+  "Non-technical: Supporting early-career statisticians and data scientists; communicating statistics"
+)
 
 interests <- tibble::tribble(
   ~ area, ~ interests,
-  "Professional", "Supporting early-career statisticians and data scientists, Bayesian methods, visualisation & communicating statistics, modelling, reproducibility",
-  "Personal", "Cycling, hiking, running, being outside"
+  "Professional", professional_interests,
+  "Personal", "Cycling, hiking, running, you know, getting covered in mud"
 )
 interests %>%
   detailed_entries(
