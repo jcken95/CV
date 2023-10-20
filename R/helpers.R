@@ -27,8 +27,6 @@ get_stack_user <- function(user_id, site = "crossvalidated", as_tibble = TRUE) {
                          query = list(site = site))
   user_items <- httr::content(user_info, as = "parsed")$items[[1]]
   class(user_items) <- "stackexchange"
-  if (as_tibble) user_items <- as_tibble.stackexchange(user_items)
+  if (as_tibble) user_items <- as_tibble.stackexchange(user_items) # nolint object usage linter
   user_items
 }
-
-

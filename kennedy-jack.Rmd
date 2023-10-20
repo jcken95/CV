@@ -43,7 +43,7 @@ intern_experience <- c(
 )
 
 gta_experience <- c(
-  "Providing one-to-one support via the university Maths-Aid service to students; queries ranging from `How to calculate a percentage?' to `Which test is most appropriate for my data?' and `How to solve this differential equation?'",
+  "Providing one-to-one support via the university Maths-Aid service to students; queries ranging from `How to calculate a percentage?' to `Which test is most appropriate for my data?' and `How to solve this differential equation?'", # nolint: line length linter
   "Provided maternity cover for senior tutor: triaging and delegating Maths-Aid appointments",
   "Delivered lectures to undergraduate students on statistical topics",
   "Marked coursework in a timely manner"
@@ -77,8 +77,8 @@ phd_notes <- c(
 
 undergrad_notes <- c(
   "Thesis: Multivariate Statistics & Machine Learning: An Application to Product Costing in Nissan",
-  "Provided Nissan's finance team with a statistical and ML toolbox to help them understand their data; regression for fast product costing; dimension reduction and clustering for outlier detection",
-  "Studied a range of mathematical and statistical topics: regression & statistical modelling; Markov models; time series; queuing theory; extreme value theory; flexible regression; multivariate methods"
+  "Provided Nissan's finance team with a statistical and ML toolbox to help them understand their data; regression for fast product costing; dimension reduction and clustering for outlier detection", # nolint: line length linter
+  "Studied a range of mathematical and statistical topics: regression & statistical modelling; Markov models; time series; queuing theory; extreme value theory; flexible regression; multivariate methods" # nolint: line length linter
 )
 
 edu <- tibble::tribble(
@@ -108,7 +108,7 @@ communicating_notes <- c(
 skills <- tibble::tribble(
   ~ skill, ~ statement,
   "R Programming", "Developed production-ready R software and packages as part of a team. Confident with base R and the {tidyverse}",
-  "Statistics & Machine Learning", "Bayesian methods, linear and non-linear regression, Bayesian optimisation, clustering, classification, inference, prediction",
+  "Statistics & Machine Learning", "Bayesian methods, linear and non-linear regression, Bayesian optimisation, clustering, classification, inference, prediction", # nolint: line length linter
   "Communicating", communicating_notes,
   "Software Development Toolkit", "Linux, Git, CI/CD, Command line",
   "Other languages & Software", "LaTeX, Stan, MATLAB, SLURM"
@@ -126,7 +126,7 @@ skills %>%
 ```{r service}
 
 rss_notes <- c(
-  "Active member of the Royal statistical society; organised a variety of in-person and online events; collaborating with Head of Conferences and Events to organise conference sessions",
+  "Active member of the Royal statistical society; organised a variety of in-person and online events; collaborating with Head of Conferences and Events to organise conference sessions", # nolint: line length linter
   "Member & Chair of the Young Statisticians Section; supporting early-career statisticians and data scientists",
   "Overseeing a team of 12 volunteers as chair of the YSS",
   "Treasurer for North Eastern Local Group"
@@ -139,15 +139,15 @@ cv_badges <- cv_stats %>%
     badge_sum = rowSums(dplyr::pick(dplyr::starts_with("badge")))
   ) %>%
   dplyr::pull("badge_sum")
-todays_date = lubridate::today()
-todays_date_friendly = glue::glue(
+todays_date <- lubridate::today()
+todays_date_friendly <- glue::glue(
   "{lubridate::month(todays_date, label = TRUE, abbr = FALSE)} {lubridate::year(todays_date)}"
 )
 
 
 misc_notes <- c(
-  "Participate in #TidyTuesday data visualisation challenge to practise visualisation and learn new-to-me R packages; see github profile for portfolio",
-  glue::glue("Top 5% overall contributor on Crossvalidated. As of {todays_date_friendly} gained {cv_stats$reputation} reputation and {cv_badges} badges")
+  "Participate in #TidyTuesday data visualisation challenge to practise visualisation and learn new-to-me R packages; see github profile for portfolio", # nolint: line length linter
+  glue::glue("Top 5% overall contributor on Crossvalidated. As of {todays_date_friendly} gained {cv_stats$reputation} reputation and {cv_badges} badges") # nolint: line length linter
 )
 
 service <- tibble::tribble(
@@ -168,7 +168,7 @@ service %>%
 # Interests
 
 ```{r interests}
-professional_interests = c(
+professional_interests <- c(
   "Technical: Bayesian methods; data visualisation; modelling; reproducibility",
   "Non-technical: Supporting early-career statisticians and data scientists; communicating statistics"
 )
