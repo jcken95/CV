@@ -28,6 +28,12 @@ I love telling stories with data, working with technology, and finding data-driv
 
 ```{r experience}
 
+ukhsa_experience <- c(
+  "Develop and maintain reproducible analytical pipelines and data-driven products",
+  "Construct forecasts and nowcasts for epidemiological surveillance",
+  "Developing a culture of writing clean, maintainable code & modelling pipelines"
+)
+
 jr_experience <- c(
   "Provide statistical consulting services to a broad range of clients",
   "Software development: contribute to production-ready R packages",
@@ -51,7 +57,8 @@ gta_experience <- c(
 
 work_experience <- tibble::tribble(
   ~ job, ~ start, ~ end, ~ employer, ~details,
-  "Data Scientist", "Jan 2023", "Today", "Jumping Rivers", jr_experience,
+  "Senior Data Scientist", "Feb 2024", "Today", "UKHSA", ukhsa_experience,
+  "Data Scientist", "Jan 2023", "Jan 2024", "Jumping Rivers", jr_experience,
   "Data Scientist (intern)", "Jan 2022", "May 2022", "NU Solve", intern_experience,
   "Graduate Teaching Assistant", "Oct 2018", " Dec 2022", "Newcastle University", gta_experience
 )
@@ -108,7 +115,7 @@ communicating_notes <- c(
 skills <- tibble::tribble(
   ~ skill, ~ statement,
   "R Programming", "Developed production-ready R software and packages as part of a team. Confident with base R and the {tidyverse}",
-  "Statistics & Machine Learning", "Bayesian methods, linear and non-linear regression, Bayesian optimisation, clustering, classification, inference, prediction", # nolint: line length linter
+  "Statistics & Machine Learning", "Bayesian methods, linear andflexible regression, Bayesian optimisation, clustering, classification, inference, prediction", # nolint: line length linter
   "Communicating", communicating_notes,
   "Software Development Toolkit", "Linux, Git, CI/CD, Command line",
   "Other languages & Software", "LaTeX, Stan, MATLAB, SLURM"
@@ -119,7 +126,6 @@ skills %>%
     why = statement
   )
 ```
-## 
 
 # Extra Curricular & Service
 
@@ -127,8 +133,7 @@ skills %>%
 
 rss_notes <- c(
   "Active member of the Royal statistical society; organised a variety of in-person and online events; collaborating with Head of Conferences and Events to organise conference sessions", # nolint: line length linter
-  "Member & Chair of the Young Statisticians Section; supporting early-career statisticians and data scientists",
-  "Overseeing a team of 12 volunteers as chair of the YSS",
+  "Previously member & Chair of the Young Statisticians Section; supporting early-career statisticians and data scientists, overseeing a team of 12 volunteers",
   "Treasurer for North Eastern Local Group"
 )
 
