@@ -79,10 +79,10 @@ work_experience %>%
 ```{r education}
 
 phd_notes <- c(
-  "Thesis: Uncertainty Quantification for Stochastic Simulators with Application to Offshore Wind Farms",
+  "\\href{https://theses.ncl.ac.uk/jspui/handle/10443/6060}{Thesis}: Uncertainty Quantification for Stochastic Simulators with Application to Offshore Wind Farms",
   "Applied and developed Gaussian process based techniques to improve the efficiency of stochastic simulation experiments",
   "Research themes: Bayesian methods; Decision Analysis; Bayesian Optimisation; Emulation; Gaussian Processes",
-  "Published in a leading Statistics journal"
+  "\\href{https://academic.oup.com/jrsssc/article/72/3/608/7082690}{Published} in a leading Statistics journal"
 )
 
 undergrad_notes <- c(
