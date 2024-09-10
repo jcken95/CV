@@ -123,7 +123,7 @@ communicating_notes <- c(
 skills <- tibble::tribble(
   ~ skill, ~ statement,
   "R Programming", r_notes,
-  "Statistics & Machine Learning", "Bayesian methods, linear andflexible regression, Bayesian optimisation, clustering, classification, inference, prediction", # nolint: line length linter
+  "Statistics & Machine Learning", "Bayesian methods, linear and flexible regression, Bayesian optimisation, clustering, classification, inference, prediction", # nolint: line length linter
   "Communicating", communicating_notes,
   "Software Development Toolkit", "Linux, Git, CI/CD, Command line",
   "Other languages & Software", "LaTeX, Stan, MATLAB, SLURM"
