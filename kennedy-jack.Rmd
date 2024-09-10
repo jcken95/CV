@@ -105,6 +105,10 @@ edu %>%
 # Technical & Professional Skills
 
 ```{r skills}
+r_notes <- c(
+  "Developed production-ready R packages as part of a team",
+  "Proficient with base R and {tidyverse} packages"
+)
 
 communicating_notes <- c(
   "Award-winning speaker with over 5 years teaching experience",
@@ -114,7 +118,7 @@ communicating_notes <- c(
 
 skills <- tibble::tribble(
   ~ skill, ~ statement,
-  "R Programming", "Developed production-ready R software and packages as part of a team. Confident with base R and the {tidyverse}",
+  "R Programming", r_notes,
   "Statistics & Machine Learning", "Bayesian methods, linear andflexible regression, Bayesian optimisation, clustering, classification, inference, prediction", # nolint: line length linter
   "Communicating", communicating_notes,
   "Software Development Toolkit", "Linux, Git, CI/CD, Command line",
