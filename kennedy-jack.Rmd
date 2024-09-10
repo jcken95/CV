@@ -10,6 +10,8 @@ position: statistician | data scientist | educator | all-round-nerd
 headcolor: 0086b3 #414141
 docname: curriculum vitae
 output: vitae::awesomecv
+header-includes:
+  - \hypersetup{colorlinks = true, linkcolor = awesome, urlcolor = awesome}
 ---
 
 ```{r setup, include=FALSE}
@@ -31,14 +33,14 @@ I love telling stories with data, working with technology, and finding data-driv
 ukhsa_experience <- c(
   "Develop and maintain reproducible analytical pipelines and data-driven products",
   "Construct forecasts and nowcasts for epidemiological surveillance",
-  "Developing a culture of writing clean, maintainable code & modelling pipelines"
+  "Developing a culture of writing clean, maintainable code and modelling pipelines"
 )
 
 jr_experience <- c(
   "Provide statistical consulting services to a broad range of clients",
   "Software development: contribute to production-ready R packages",
   "Teach statistical and programming concepts in R with best practices front and centre to academia, industry and government",
-  "Organise the `North East Data Scientists' meetup"
+  "Outreach: organise the `North East Data Scientists' meetup and contribute to \\href{https://www.jumpingrivers.com/authors/jack-kennedy/}{company blog}"
 )
 
 intern_experience <- c(
@@ -67,7 +69,8 @@ work_experience %>%
     what = job,
     when = glue::glue("{start} - {end}"),
     with = employer,
-    why = details
+    why = details,
+    .protect = FALSE
   )
 ```
 
@@ -83,22 +86,23 @@ phd_notes <- c(
 )
 
 undergrad_notes <- c(
-  "Thesis: Multivariate Statistics & Machine Learning: An Application to Product Costing in Nissan",
+  "Thesis: Multivariate Statistics \\& Machine Learning: An Application to Product Costing in Nissan",
   "Provided Nissan's finance team with a statistical and ML toolbox to help them understand their data; regression for fast product costing; dimension reduction and clustering for outlier detection", # nolint: line length linter
-  "Studied a range of mathematical and statistical topics: regression & statistical modelling; Markov models; time series; queuing theory; extreme value theory; flexible regression; multivariate methods" # nolint: line length linter
+  "Studied a range of mathematical and statistical topics: regression \\& statistical modelling; Markov models; time series; queuing theory; extreme value theory; flexible regression; multivariate methods" # nolint: line length linter
 )
 
 edu <- tibble::tribble(
   ~ degree, ~ start, ~ end, ~ institution, ~details,
-  "PhD Statistics", 2018, 2023, "Newcastle University", phd_notes,
-  "MMathStat (First class)", 2012, 2018, "Newcastle University", undergrad_notes,
+  "PhD Statistics", "2018", "2023", "Newcastle University", phd_notes,
+  "MMathStat (First class)", "2012", "2018", "Newcastle University", undergrad_notes,
 )
 edu %>%
   detailed_entries(
     what = degree,
     when = glue::glue("{start} - {end}"),
     with = institution,
-    why = details
+    why = details,
+    .protect = FALSE
   )
 ```
 
@@ -137,8 +141,8 @@ skills %>%
 
 rss_notes <- c(
   "Active member of the Royal statistical society; organised a variety of in-person and online events; collaborating with Head of Conferences and Events to organise conference sessions", # nolint: line length linter
-  "Previously member & Chair of the Young Statisticians Section; supporting early-career statisticians and data scientists, overseeing a team of 12 volunteers",
-  "Treasurer for North Eastern Local Group"
+  "Previously member \\& Chair of the Young Statisticians Section; supporting early-career statisticians and data scientists, overseeing a team of 12 volunteers",
+  "Treasurer \\& committee member for North Eastern Local Group"
 )
 
 cv_stats <- get_stack_user("283201")
@@ -155,21 +159,22 @@ todays_date_friendly <- glue::glue(
 
 
 misc_notes <- c(
-  "Participate in #TidyTuesday data visualisation challenge to practise visualisation and learn new-to-me R packages; see github profile for portfolio", # nolint: line length linter
-  glue::glue("Top 5% overall contributor on Crossvalidated. As of {todays_date_friendly} gained {cv_stats$reputation} reputation and {cv_badges} badges") # nolint: line length linter
+  "Participate in \\#TidyTuesday data visualisation challenge to practise visualisation and learn new-to-me R packages; see \\href{https://github.com/jcken95/tidytuesday}{GitHub repository}", # nolint: line length linter
+  glue::glue("Top 5\\% overall contributor on Crossvalidated. As of {todays_date_friendly} gained {cv_stats$reputation} reputation and {cv_badges} badges") # nolint: line length linter
 )
 
 service <- tibble::tribble(
   ~ job, ~ start, ~ end, ~ institution, ~details,
-  "Fellow & Volunteer", "2019", "Today", "Royal Statistical Society", rss_notes,
-  "Things I do because I love stats, data and computers", "", "", "Projects & Online Activity", misc_notes,
+  "Fellow \\& Volunteer", "2019", "Today", "Royal Statistical Society", rss_notes,
+  "Things I do because I love stats, data and computers", "", "", "Projects \\& Online Activity", misc_notes,
 )
 service %>%
   detailed_entries(
     what = job,
     when = glue::glue("{start} - {end}"),
     with = institution,
-    why = details
+    why = details,
+    .protect = FALSE
   )
 
 ```
