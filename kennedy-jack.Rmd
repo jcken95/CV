@@ -33,7 +33,7 @@ I love telling stories with data, working with technology, and finding data-driv
 ukhsa_experience <- c(
   "Develop and maintain reproducible analytical pipelines and data-driven products",
   "Construct forecasts and nowcasts for epidemiological surveillance",
-  "Developing a culture of writing clean, maintainable code and modelling pipelines"
+  "Promoting a culture of writing clean, maintainable code and modelling pipelines"
 )
 
 jr_experience <- c(
