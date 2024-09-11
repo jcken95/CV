@@ -24,7 +24,8 @@ source("R/helpers.R")
 
 I am a PhD educated statistician and data scientist with experience in data science consultancy and training.
 
-I love telling stories with data, working with technology, and finding data-driven solutions to challenging problems.
+
+I enjoy finding data-driven solutions to challenging problems whilst maintaining and improving best practices.
 
 # Experience
 
@@ -183,7 +184,7 @@ service %>%
 
 ```{r interests}
 professional_interests <- c(
-  "Technical: Bayesian methods; data visualisation; modelling; reproducibility",
+  "Technical: Bayesian methods; data visualisation; modelling; reproducibility; best practices",
   "Non-technical: Supporting early-career statisticians and data scientists; communicating statistics"
 )
 
