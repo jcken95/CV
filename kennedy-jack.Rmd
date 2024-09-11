@@ -40,7 +40,7 @@ jr_experience <- c(
   "Provide statistical consulting services to a broad range of clients",
   "Software development: contribute to production-ready R packages",
   "Teach statistical and programming concepts in R with best practices front and centre to academia, industry and government",
-  "Outreach: organise the `North East Data Scientists' meetup and contribute to \\href{https://www.jumpingrivers.com/authors/jack-kennedy/}{company blog}"
+  "Outreach: organise the `North East Data Scientists' meetup and contribute to \\href{https://www.jumpingrivers.com/authors/jack-kennedy/}{company blog}" # nolint: line length linter.
 )
 
 intern_experience <- c(
@@ -78,7 +78,7 @@ work_experience %>%
 
 ```{r education}
 phd_notes <- c(
-  "\\href{https://theses.ncl.ac.uk/jspui/handle/10443/6060}{Thesis}: Uncertainty Quantification for Stochastic Simulators with Application to Offshore Wind Farms",
+  "\\href{https://theses.ncl.ac.uk/jspui/handle/10443/6060}{Thesis}: Uncertainty Quantification for Stochastic Simulators with Application to Offshore Wind Farms", # nolint: line length linter.
   "Applied and developed Gaussian process based techniques to improve the efficiency of stochastic simulation experiments",
   "Research themes: Bayesian methods; Decision Analysis; Bayesian Optimisation; Emulation; Gaussian Processes",
   "\\href{https://academic.oup.com/jrsssc/article/72/3/608/7082690}{Published} in a leading Statistics journal"
@@ -86,8 +86,8 @@ phd_notes <- c(
 
 undergrad_notes <- c(
   "Thesis: Multivariate Statistics \\& Machine Learning: An Application to Product Costing in Nissan",
-  "Provided Nissan's finance team with a statistical and ML toolbox to help them understand their data; regression for fast product costing; dimension reduction and clustering for outlier detection", # nolint: line length linter
-  "Studied a range of mathematical and statistical topics: regression \\& statistical modelling; Markov models; time series; queuing theory; extreme value theory; flexible regression; multivariate methods" # nolint: line length linter
+  "Provided Nissan's finance team with a statistical and ML toolbox to help them understand their data; regression for fast product costing; dimension reduction and clustering for outlier detection", # nolint: line length linter.
+  "Studied a range of mathematical and statistical topics: regression \\& statistical modelling; Markov models; time series; queuing theory; extreme value theory; flexible regression; multivariate methods" # nolint: line length linter.
 )
 
 edu <- tibble::tribble(
@@ -122,7 +122,7 @@ communicating_notes <- c(
 skills <- tibble::tribble(
   ~skill, ~statement,
   "R Programming", r_notes,
-  "Statistics & Machine Learning", "Bayesian methods, linear and flexible regression, Bayesian optimisation, clustering, classification, inference, prediction", # nolint: line length linter
+  "Statistics & Machine Learning", "Bayesian methods, linear and flexible regression, Bayesian optimisation, clustering, classification, inference, prediction", # nolint: line length linter.
   "Communicating", communicating_notes,
   "Software Development Toolkit", "Linux, Git, CI/CD, Command line",
   "Other languages & Software", "LaTeX, Stan, MATLAB, SLURM"
@@ -138,8 +138,8 @@ skills %>%
 
 ```{r service}
 rss_notes <- c(
-  "Active member of the Royal statistical society; organised a variety of in-person and online events; collaborating with Head of Conferences and Events to organise conference sessions", # nolint: line length linter
-  "Previously member \\& Chair of the Young Statisticians Section; supporting early-career statisticians and data scientists, overseeing a team of 12 volunteers",
+  "Active member of the Royal statistical society; organised a variety of in-person and online events; collaborating with Head of Conferences and Events to organise conference sessions", # nolint: line length linter.
+  "Previously member \\& Chair of the Young Statisticians Section; supporting early-career statisticians and data scientists, overseeing a team of 12 volunteers", # nolint: line length linter.
   "Treasurer \\& committee member for North Eastern Local Group"
 )
 
@@ -157,8 +157,8 @@ todays_date_friendly <- glue::glue(
 
 
 misc_notes <- c(
-  "Participate in \\#TidyTuesday data visualisation challenge to practise visualisation and learn new-to-me R packages; see \\href{https://github.com/jcken95/tidytuesday}{GitHub repository}", # nolint: line length linter
-  glue::glue("Top 5\\% overall contributor on Crossvalidated. As of {todays_date_friendly} gained {cv_stats$reputation} reputation and {cv_badges} badges") # nolint: line length linter
+  "Participate in \\#TidyTuesday data visualisation challenge to practise visualisation and learn new-to-me R packages; see \\href{https://github.com/jcken95/tidytuesday}{GitHub repository}", # nolint: line length linter.
+  glue::glue("Top 5\\% overall contributor on Crossvalidated. As of {todays_date_friendly} gained {cv_stats$reputation} reputation and {cv_badges} badges") # nolint: line length linter.
 )
 
 service <- tibble::tribble(
